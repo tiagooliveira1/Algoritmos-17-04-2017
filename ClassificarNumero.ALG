@@ -15,7 +15,7 @@ Inicio
    meuVetor[0] <- 1;
    meuVetor[1] <- 12;
    meuVetor[2] <- 49;
-   meuVetor[3] <- 22;
+   meuVetor[3] <- 152;
    meuVetor[4] <- 87;
    meuVetor[5] <- 18;
    meuVetor[6] <- 99;
@@ -33,7 +33,7 @@ Inicio
 
 
    para i de 0 ate 7 faca
-        escreval(meuVetor[i])
+        escreval(i, " - ",meuVetor[i])
    
    fimpara
 
