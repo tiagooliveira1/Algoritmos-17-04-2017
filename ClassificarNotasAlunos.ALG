@@ -10,8 +10,12 @@ Var
   j: inteiro
   aux: Real
   auxCaracter: caracter
+  totalAprovados, totalReprovados, totalRecuperacao: inteiro;
 Inicio
 
+   totalAprovados <- 0;
+   totalReprovados <- 0;
+   totalRecuperacao <- 0;
    
    // pega os valores
    para i de 0 ate 352 faca
@@ -52,14 +56,17 @@ Inicio
    // imprime a lista de idade decrescente
    para i de 0 ate 352 faca
         escreva(i, " - ",listaNomes[i], " Média: ", media[i] ," Nota1:", notas[i,0], "Nota2:", notas[i,1] )
-        se media[i] >= 7 entao
+        se media[i] >= 70 entao
            escreval(" - APROVADO")
+           totalAprovados <- (totalAprovados+1)
         senao
-             se media[i] < 4 entao
+             se media[i] < 40 entao
                 escreval(" - REPROVADO")
+                totalReprovados <- (totalReprovados+1)
 //             fimse
         senao
           escreval(" - RECUPERACAO")
+          totalRecuperacao <- (totalRecuperacao+1)
         fimse
         
         fimse
@@ -102,6 +109,16 @@ Inicio
         fimse
         
    fimpara
+   
+   escreva("Total Aprovados  : ")
+   escreva(totalAprovados, " ", (totalAprovados/352)*100, "%" )
+   escreval("")
+   escreva("Total Reprovados : ")
+   escreva(totalReprovados, " ", (totalReprovados/352)*100, "%" )
+   escreval("")
+   escreva("Total Recuperação: ")
+   escreva(totalRecuperacao, " ", (totalRecuperacao/352)*100, "%" )
+   escreval("")
 
 
 Fimalgoritmo
